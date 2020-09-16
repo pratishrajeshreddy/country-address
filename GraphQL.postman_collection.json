@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "ea2025cc-cc33-4b04-ac4e-cdbd2062a106",
+		"name": "GraphQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All Address",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/graphql"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tfindAllAddress{\n\t  country\n\t  addressLine1\n\t  addressLine2\n\t  street\n\t  city\n\t  state\n\t  country\n\t  countryCode\n\t  zipCode\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/apis/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apis",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Address By CountryCode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/graphql"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    findAddressByCountry(countryCode: \"USA\") {\n\t  country\n\t  addressLine1\n\t  addressLine2\n\t  street\n\t  city\n\t  state\n\t  country\n\t  countryCode\n\t  zipCode\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/apis/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apis",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

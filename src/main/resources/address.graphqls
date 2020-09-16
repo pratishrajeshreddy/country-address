@@ -1,0 +1,16 @@
+type Address {
+	addressLine1: String
+	addressLine2: String
+	street: String
+	city: String
+	state: String
+	country: String
+	countryCode: String!
+	zipCode: String
+}
+
+# Root
+type Query {
+	findAllAddress: [Address]!
+	findAddressByCountry(countryCode: String): Address!
+}
